@@ -1,3 +1,4 @@
 # PosApi
 API para proyecto del SENA POS MyShopManager
-construida con ##Springboot3
+construida con 
+##Springboot3
