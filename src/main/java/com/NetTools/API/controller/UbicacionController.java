@@ -1,10 +1,7 @@
 package com.NetTools.API.controller;
 
-
-
-import com.NetTools.API.producto.DatosRegistroProducto;
-
-import com.NetTools.API.producto.RegistroDeProductoService;
+import com.NetTools.API.ubicacion.DatosRegistroUbicacion;
+import com.NetTools.API.ubicacion.RegistroUbicacionService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,20 +11,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/producto")
-public class ProductoController {
-
+@RequestMapping("/ubicacion")
+public class UbicacionController {
 
     @Autowired
-    private RegistroDeProductoService service;
+    private RegistroUbicacionService service;
 
     @PostMapping
-    public ResponseEntity registrarProducto(@RequestBody @Valid DatosRegistroProducto datosRegistroProducto){
-
-        var response=service.registrar(datosRegistroProducto);
+    public ResponseEntity registrarUbicacion(@RequestBody @Valid DatosRegistroUbicacion datosRegistroUbicacion) {
+        var response=service.registrar(datosRegistroUbicacion);
+        System.out.println(datosRegistroUbicacion);
 
         return ResponseEntity.ok(response);
-
     }
 
 
