@@ -1,5 +1,5 @@
 CREATE TABLE `producto` (
-                            `id` bigint NOT NULL auto_increment,
+                            `productoId` bigint NOT NULL auto_increment,
                             `codigo` varchar(20) NOT NULL,
                             `descripcion` varchar(50) NOT NULL,
                             `categoriaId` varchar(25) NOT NULL,
@@ -7,5 +7,5 @@ CREATE TABLE `producto` (
                             `precioEntrada` int(15) NOT NULL,
                             `precioSalida` int(15) NOT NULL,
                             `imagePath` varchar(250) NOT NULL,
-                            primary key(id)
+                            primary key(productoId)
 );

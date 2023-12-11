@@ -19,7 +19,7 @@ public class Ubicacion {
 
     private Long ubicacionId;
     private String codigoUbicacion;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="categoriaId")
     private Categoria categoria;
     private String zona;

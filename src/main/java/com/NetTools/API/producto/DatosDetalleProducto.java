@@ -4,7 +4,7 @@ package com.NetTools.API.producto;
 import java.math.BigDecimal;
 
 public record DatosDetalleProducto(
-        Long id,
+        Long productoId,
         String codigo,
         String descripcion,
         Long categoriaId,

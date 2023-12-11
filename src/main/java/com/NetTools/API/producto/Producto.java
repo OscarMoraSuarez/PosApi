@@ -1,6 +1,7 @@
 package com.NetTools.API.producto;
 
 import com.NetTools.API.categoria.Categoria;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -21,7 +22,8 @@ public class Producto {
     private Long productoId;
     private String codigo;
     private String descripcion;
-    @ManyToOne(fetch = FetchType.LAZY)
+
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="categoriaId",referencedColumnName = "categoriaId")
     private Categoria categoria;
     private String marca;
