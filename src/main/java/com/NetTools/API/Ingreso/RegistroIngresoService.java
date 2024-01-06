@@ -1,5 +1,7 @@
 package com.NetTools.API.Ingreso;
 
+
+import com.NetTools.API.Inventario.InventarioService;
 import com.NetTools.API.producto.Producto;
 import com.NetTools.API.producto.ProductoRepository;
 import com.NetTools.API.ubicacion.Ubicacion;
@@ -16,7 +18,13 @@ public class RegistroIngresoService {
     @Autowired
     private UbicacionRepository ubicacionRepository;
     @Autowired
-    private IngresoRepository inventarioRepository;
+    private IngresoRepository ingresoRepository;
+    @Autowired
+    private InventarioService inventarioService;
+
+
+
+
 
     @Transactional
     public DatosDetalleIngreso registrar(DatosRegistroIngreso datos) {
@@ -30,11 +38,15 @@ public class RegistroIngresoService {
         if (ubicacion==null){
             System.out.println("no existe una ubicacion con ese id");
         }
-        var inventario=new Ingreso(producto,datos.cantidad(),ubicacion);
-        inventarioRepository.save(inventario);
-        return new DatosDetalleIngreso(inventario);
+        var ingreso=new Ingreso(producto,datos.cantidad(),ubicacion);
+        ingresoRepository.save(ingreso);
+        inventarioService.actualizarInventario(producto.getCodigo(),datos.cantidad());
+
+        return new DatosDetalleIngreso(ingreso);
 
     }
+
+
 
 
 }

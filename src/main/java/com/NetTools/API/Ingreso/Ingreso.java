@@ -7,8 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Table(name="inventario")
-@Entity(name="Inventario")
+@Table(name="ingreso")
+@Entity(name="Ingreso")
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor

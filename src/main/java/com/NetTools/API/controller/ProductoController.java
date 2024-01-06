@@ -3,7 +3,6 @@ package com.NetTools.API.controller;
 
 
 import com.NetTools.API.producto.DatosRegistroProducto;
-
 import com.NetTools.API.producto.RegistroDeProductoService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

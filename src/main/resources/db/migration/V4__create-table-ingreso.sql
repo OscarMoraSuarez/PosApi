@@ -1,4 +1,4 @@
-CREATE TABLE `inventario` (
+CREATE TABLE `ingreso` (
                              `inventarioId` bigint NOT NULL auto_increment,
                              `productoId` bigint NOT NULL,
                              `cantidad` bigint NOT NULL,

@@ -49,11 +49,8 @@ public class RegistroDeProductoService {
 
     private Categoria seleccionarCategoria(DatosRegistroProducto datos) {
         if (datos.categoriaId() != null) {
-            // Utilizamos el nuevo método del repositorio para buscar la categoría por su ID
             return categoriaRepository.findByCategoriaId(datos.categoriaId());
         }
-        // Aquí puedes manejar el caso en el que datos.categoriaId() es nulo,
-        // dependiendo de tus requisitos de negocio.
         return null;
     }
 

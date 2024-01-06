@@ -2,8 +2,6 @@ package com.NetTools.API.ubicacion;
 
 import com.NetTools.API.categoria.Categoria;
 import com.NetTools.API.categoria.CategoriaRepository;
-import com.NetTools.API.producto.DatosDetalleProducto;
-import com.NetTools.API.producto.DatosRegistroProducto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
